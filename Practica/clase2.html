@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Frontend III Ejercicio práctico clase 1</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>   
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+  </head>
+
+  <body>
+
+    <div id=root> </div>
+
+        <script type="text/babel">
+        
+            // creo el listado a recorrer
+            const textos = [
+            "Con lo visto hasta ahora",
+            "Replica este HTML",
+            "Usando",
+            "React.js",
+            "Suerte!"
+            ];
+
+            // creo la función que recorre el listado, agregando key y devolviendo un 'p' por cada item
+            // aclaracion: uso props.algo.map porque estoy definiendo qué propiedad quiero traer, y entonces luego del prop puedo decir qué info quiero traer de cada elemento o en cada iteración.
+            function ListarTextos (props) {
+                const texto = props.texto.map((item, index) => <p key={index}>{item}</p>);
+                return <p> {texto} </p>;
+            };
+
+            // finalmente renderizo lo que devuelve la función en un div, que estará dentro del div 'root'
+            ReactDOM.render(
+                <div>
+                    <ListarTextos texto = {textos}/>
+                </div>,
+                document.getElementById("root")
+            );
+
+        </script>
+
+  </body>
+</html>

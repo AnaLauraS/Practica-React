@@ -1,0 +1,46 @@
+.encabezado{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.botones{
+    width: 100%;
+    background-color: rgb(255, 92, 80);
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 8%;
+    margin-top: 20px;
+}
+
+.col1{
+    width: 40vw;
+    margin-top: 10px;
+}
+
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.col2{
+    width: 35vw;
+}
+
+h4{
+    margin-bottom: 10px;
+}
+p, ul{
+    margin: 0;
+}
+.espacio{
+    margin-top: 8px;
+}
